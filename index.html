@@ -3,43 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Introduction to the Wonderful World of Single-Cell | An IPYNB Tutorial by Kiron Ang</title>
-  <!-- Favicon: A forest green (hex #228B22) square -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><rect width='16' height='16' fill='%23228B22'/></svg>">
-  <!-- Include NotebookJS library and its CSS from unpkg CDN (version 0.3.0) -->
-  <script src="https://unpkg.com/notebookjs@0.3.0/dist/notebook.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/notebookjs@0.3.0/dist/notebook.min.css">
+  <link rel="icon" href="<svg><rect width='16' height='16' fill='#000000'/></svg>">
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 2rem;
-    }
-    #notebook-container {
-      max-width: 800px;
-      margin: auto;
-    }
   </style>
 </head>
 <body>
-  <!-- Container where the notebook will be rendered -->
-  <div id="notebook-container"></div>
-
   <script>
-    // Fetch the local notebook file ("introduction.ipynb")
-    fetch('introduction.ipynb')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Could not load notebook file: ' + response.statusText);
-        }
-        return response.json();
-      })
-      .then(notebookData => {
-        const container = document.getElementById('notebook-container');
-        // Render the notebook using NotebookJS.
-        container.innerHTML = NotebookJS.render(notebookData);
-      })
-      .catch(error => {
-        console.error('Error loading or rendering the notebook:', error);
-      });
   </script>
 </body>
 </html>
