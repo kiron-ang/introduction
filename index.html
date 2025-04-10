@@ -5,9 +5,9 @@
   <title>Introduction to the Wonderful World of Single-Cell | An IPYNB Tutorial by Kiron Ang</title>
   <!-- Favicon: A forest green (hex #228B22) square -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><rect width='16' height='16' fill='%23228B22'/></svg>">
-  <!-- Include NotebookJS library and its CSS (ensure version compatibility) -->
-  <script src="https://cdn.jsdelivr.net/npm/notebookjs@latest/dist/notebook.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notebookjs@latest/dist/notebook.min.css">
+  <!-- Include NotebookJS library and its CSS from unpkg CDN (version 0.3.0) -->
+  <script src="https://unpkg.com/notebookjs@0.3.0/dist/notebook.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/notebookjs@0.3.0/dist/notebook.min.css">
   <style>
     body {
       font-family: sans-serif;
@@ -20,12 +20,11 @@
   </style>
 </head>
 <body>
-  <h1>TEST</h1>
-  <!-- Container for the rendered notebook -->
+  <!-- Container where the notebook will be rendered -->
   <div id="notebook-container"></div>
 
   <script>
-    // Fetch the notebook file (introduction.ipynb must be in the same directory)
+    // Fetch the local notebook file ("introduction.ipynb")
     fetch('introduction.ipynb')
       .then(response => {
         if (!response.ok) {
@@ -35,7 +34,7 @@
       })
       .then(notebookData => {
         const container = document.getElementById('notebook-container');
-        // Render the notebook using NotebookJS. Adjust the API call if your version differs.
+        // Render the notebook using NotebookJS.
         container.innerHTML = NotebookJS.render(notebookData);
       })
       .catch(error => {
