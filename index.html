@@ -3,12 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Introduction to the Wonderful World of Single-Cell | An IPYNB Tutorial by Kiron Ang</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='32'%3E%3Crect%20width='32'%20height='32'%20fill='%23FFC0CB'/%3E%3C/svg%3E">
   <style>
+    /* Basic styling for a clean notebook display */
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+    #notebook {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 960px;
+      margin: auto;
+    }
   </style>
+  <!-- Include jQuery from a CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Include ipynb.js to convert the notebook JSON into HTML -->
+  <script src="https://cdn.jsdelivr.net/gh/filnatis/ipynb.js@0.3.5/dist/ipynb.min.js"></script>
 </head>
 <body>
+  <!-- This is the container where the notebook will be rendered -->
+  <div id="notebook"></div>
   <script>
+    // Wait for the DOM to be ready
+    $(document).ready(function() {
+      // Fetch the IPYNB file (assumed to be in the same directory)
+      $.getJSON("introduction.ipynb", function(data) {
+        // Create a Notebook object from the JSON using ipynb.js
+        var notebook = new ipynb.Notebook(data);
+        // Render the notebook HTML inside the #notebook container
+        $("#notebook").html(notebook.render());
+      });
+    });
   </script>
 </body>
 </html>
