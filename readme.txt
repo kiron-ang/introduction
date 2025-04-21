@@ -1,0 +1,13 @@
+Please use the following verbs when writing GitHub commit messages:
+- Add
+- Drop
+- Fix
+- Bump
+- Make
+- Start
+- Stop
+- Optimize
+- Document
+- Refactor
+- Reformat
+- Update
