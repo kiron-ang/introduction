@@ -2,7 +2,7 @@ Hi!
 
 This repository contains a tutorial for people that want to learn more about analyzing single-cell transcriptomic data with Python! The tutorial is designed for undergraduate and graduate students that have a basic understanding of bioinformatics. It features some publicly available data from this open access research paper:
 
-> Notaro, M., Borghetti, M., Bresesti, C. et al. In vivo armed macrophages curb liver metastasis through tumor-reactive T-cell rejuvenation. Nat Commun 16, 3471 (2025). https://doi.org/10.1038/s41467-025-58369-2
+Notaro, M., Borghetti, M., Bresesti, C. et al. In vivo armed macrophages curb liver metastasis through tumor-reactive T-cell rejuvenation. Nat Commun 16, 3471 (2025). https://doi.org/10.1038/s41467-025-58369-2
 
 Make sure to read the paper before starting the tutorial! You can view the "introduction.ipynb" file on GitHub, on Google Colab, or at kiron-ang.github.io/introduction. Note that the "license.txt" file explains that this repository's code is free for anyone to use. So, mentors can modify my tutorial to make it more accessible to their mentees. 
 
